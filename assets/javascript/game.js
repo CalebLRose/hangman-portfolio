@@ -8,9 +8,19 @@ document.getElementById("losses").innerHTML = ("Losses: " + losses);
 var wrongGuess = 10;
 
 
-
+// var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 // Create an array of words
-var wordList = ["Rick Deckard", "Gaff", "Rachel", "Roy Batty", "Pris Stratton", "Replicant", "Tyrell Corporation", "Blush Response", "Do Androids Dream of Electric Sheep", "Phillip K Dick", "Vangelis", "Ridley Scott"];
+var wordList = ["Rick Deckard", 
+				"Gaff", 
+				"Rachel", 
+				"Roy Batty", 
+				"Pris Stratton", 
+				"Replicant", 
+				"Tyrell Corporation", 
+				"Blush Response", 
+				"Vangelis", 
+				"Ridley Scott"
+			];
 
 // Choose a word randomly 
 var choice = Math.floor(Math.random() * wordList.length);
@@ -44,16 +54,24 @@ document.getElementById("answer").innerHTML = (underscore.join(" ")) ;
 // If guess is right take out of available choices and add show letter on screen. Take letter out of array of possible choices. 
 // If guess wrong: take out of list of possible choices and animate hangman progressively.
 document.onkeyup = function(event) {
-	var userInput = event.key.toLowerCase();
-	console.log(userInput);
-
-	if (chosenWord.indexOf(userInput) == -1) {
-		wrongGuess--;
-		console.log(wrongGuess);
-	}
+		var userInput = event.key.toLowerCase();
+		console.log(userInput);
 	
-};
-document.getElementById("guesses").innerHTML = ("Guesses left: " + wrongGuess);
+
+	if (chosenWord.indexOf(userInput) != -1) {
+		for (j = 0; j<chosenWord.length; j++){
+			if (chosenWord[j] == userInput){
+				underscore[j] = chosenWord[j];
+				document.getElementById("answer").innerHTML = (underscore.join(" "));
+				}
+			};
+		} else {
+			wrongGuess--;
+			console.log(wrongGuess);
+			document.getElementById("guesses").innerHTML = ("Guesses left: " + wrongGuess);
+		};
+	};
+
 
 
  
