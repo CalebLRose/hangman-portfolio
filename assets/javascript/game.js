@@ -24,18 +24,16 @@ var wordList = ["Mike",
 			];
 			
 
-
-// begin game
-document.onkeyup = function(event){
-
 	// Choose a word randomly 
 	var choice = Math.floor(Math.random() * wordList.length);
 	var chosenWord = wordList[choice].toLowerCase();
+
 	// Create underscores based on the length of word
 	var underscore = [];
 	var str = "";
+	
 
-	function generateWord(chosenWord) {
+	function generateUnderscore(chosenWord) {
 		for (var i =0; i < chosenWord.length; i++) {
 			underscore.push("_");
 			str += "_";
@@ -44,10 +42,11 @@ document.onkeyup = function(event){
 	};
 	console.log(underscore.join(""));
 	console.log("chosen word "+chosenWord);
-	console.log(generateWord(chosenWord));
+	console.log(generateUnderscore(chosenWord));
 	console.log("str "+str);	
 	console.log("under "+underscore.join(""));
-	document.getElementById("answer").innerHTML = (underscore.join(" "));	
+	document.getElementById("answer").innerHTML = (underscore.join(" "));
+	
 
 // Check users guess
 // Check if the guess is correct
@@ -56,6 +55,11 @@ document.onkeyup = function(event){
 	document.onkeyup = function(event) {
 		var userInput = event.key.toLowerCase();
 		console.log(userInput);
+		var para = document.createElement("p");
+		var node = document.createTextNode(userInput);
+		para.appendChild(node);
+		var element = document.getElementById("lettersGuessed");
+		element.appendChild(para);
 			if (chosenWord.indexOf(userInput) != -1) {
 				for (j = 0; j<chosenWord.length; j++){
 					if (chosenWord[j] == userInput){
@@ -69,8 +73,12 @@ document.onkeyup = function(event){
 				console.log(wrongGuess);
 				document.getElementById("guesses").innerHTML = ("Guesses left: " + wrongGuess);
 			};
+			if (wrongGuess === 0){
+				document.getElementById("gameOver").innerHTML = ("Game Over");
+				document.getElementById("gameOver").style.visibility = "visible";
+			}
 	};
-};
+
 
 } 
 
