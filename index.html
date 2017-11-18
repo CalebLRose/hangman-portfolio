@@ -5,20 +5,18 @@
 
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="assets/javascript/game.js"></script>
 </head>
 <body>
 	<h1>Hangman</h1>
 	<h2>Bladerunner Edition</h2>
 	
 	<div id="whole">
+			<!-- centered -->
 		<div>
-			<!-- Scoreboard -->
-			<p id="wins"></p>
-			<p id="losses"></p>
-			<p id="guesses">Guesses Left: 10</p>
-
+			<h1>Press any key to start!</h1>
 		</div>
-
+		<!-- left aligned -->
 		<div id="images">
 			<!-- this will be the left side of the display, where the images will be desplayed. -->
 		</div>
@@ -26,8 +24,15 @@
 			<!-- this is the right side where the game info will be displayed. -->
 			<p id="answer"></p>
 		</div>
+		<div>
+			<!-- Scoreboard right aligned -->
+			<p id="wins"></p>
+			<p id="losses"></p>
+			<p id="guesses">Guesses Left: 10</p>
+			<p id="lettersGuessed">Letters guessed: </p>
+
+		</div>
 	</div>
 
-<script src="assets/javascript/game.js"></script>
 </body>
 </html>
