@@ -2,15 +2,18 @@
 <html>
 <head>
 	<title>Hangman</title>
-
+	
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script src="assets/javascript/game.js"></script>
+
 </head>
 <body>
-	<h1 id="title">Hangman</h1>
-	<h2 id="subTitle">Stranger Things</h2>
-	
+	<div id="heading">
+		<h1 id="title"><span id="h">H</span>ANGMA<span id="n">N</span></h1>
+		<h2 id="subTitle">Stranger Things Edition</h2>
+	</div>
+
 	<div id="whole">
 			<!-- centered -->
 		<div>
@@ -26,8 +29,8 @@
 		</div>
 		<div>
 			<!-- Scoreboard right aligned -->
-			<p id="wins"></p>
-			<p id="losses"></p>
+			<p id="wins">Wins: 0</p>
+			<p id="losses">Losses: 0</p>
 			<p id="guesses">Guesses Left: 10</p>
 			
 		</div>

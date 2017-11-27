@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Webfonts Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+	    body, textarea { font-family:Arial, Sans-Serif; line-height:1.6em; font-size:13px; }
+	    h1 { font-size:3em; }
+	    h2, h3 { color:#999; }
+	    .content { width:780px; margin: 20px auto 40px; }
+	    .demo { font-weight:bold; font-style:normal; color: #999 }
+	    .fontdisplay {font-size:2em;line-height:150%;margin: 10px 40px 0px 0px;}
+	    .guidelines { color:#333; }
+	    pre { padding:0 0 0 20px; }
+	    hr { border:0; border-bottom:1px solid #537094; margin:20px 0; }
+	    .link { color: #537094;text-decoration:none; font-weight:bold;}
+	    .uc {text-transform:uppercase}
+	    
+    </style>
+    <style type="text/css">
+
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=b88d06ae-ffa0-4966-bb0c-004af7a4ab28");
+    @font-face{
+        font-family:"ITC Serif Gothic W01 Light";
+        src:url("Fonts/b48153ff-91ec-4a5e-984c-f18f2131fdcd.eot?#iefix");
+        src:url("Fonts/b48153ff-91ec-4a5e-984c-f18f2131fdcd.eot?#iefix") format("eot"),url("Fonts/0bb0fed2-c048-479d-b066-6e827220acfd.woff2") format("woff2"),url("Fonts/947a585d-09d8-4c06-9210-ad3c83d2a5c3.woff") format("woff"),url("Fonts/7db29c7f-eca8-44ad-a1a9-b67084e525e9.ttf") format("truetype"),url("Fonts/5bbd4cf1-8bb2-48e3-8904-724e2c2bd79c.svg#5bbd4cf1-8bb2-48e3-8904-724e2c2bd79c") format("svg");
+    }
+    @font-face{
+        font-family:"ITC Serif Gothic W01 Regular";
+        src:url("Fonts/b43886e2-e680-4298-a1d3-04a98e443c58.eot?#iefix");
+        src:url("Fonts/b43886e2-e680-4298-a1d3-04a98e443c58.eot?#iefix") format("eot"),url("Fonts/8267519e-38e1-42b7-b339-a79d3cde5002.woff2") format("woff2"),url("Fonts/606558f4-4199-4bb9-ab0b-4dd3f367aadf.woff") format("woff"),url("Fonts/137f2c49-985f-452d-b750-3add9d73c43b.ttf") format("truetype"),url("Fonts/0206f4da-d12c-40a8-a650-f205d7ef417d.svg#0206f4da-d12c-40a8-a650-f205d7ef417d") format("svg");
+    }
+    @font-face{
+        font-family:"ITC Serif Gothic W01 Bold";
+        src:url("Fonts/8a93a51e-d42c-4af6-820d-916a3af90843.eot?#iefix");
+        src:url("Fonts/8a93a51e-d42c-4af6-820d-916a3af90843.eot?#iefix") format("eot"),url("Fonts/00cca847-1c2d-4f4f-8f48-2aa716baf319.woff2") format("woff2"),url("Fonts/bfc6196d-ff5b-4479-bee4-2fb7ea160473.woff") format("woff"),url("Fonts/2c63e36c-a575-4dc4-8474-6f85d3907f11.ttf") format("truetype"),url("Fonts/8ed94d50-0c48-4567-a54f-c91b17b5a05f.svg#8ed94d50-0c48-4567-a54f-c91b17b5a05f") format("svg");
+    }
+    @font-face{
+        font-family:"ITC Serif Gothic W01 Xtra Bold";
+        src:url("Fonts/637b12d8-ebf7-4544-8a75-1df81c2cf93f.eot?#iefix");
+        src:url("Fonts/637b12d8-ebf7-4544-8a75-1df81c2cf93f.eot?#iefix") format("eot"),url("Fonts/7879481a-3cca-4aa3-b61a-0ea374873d3c.woff2") format("woff2"),url("Fonts/da1a4bf3-eb87-4fcf-a331-f94204cdff8b.woff") format("woff"),url("Fonts/5d80bec5-9683-425e-9b82-0f12312b4e5f.ttf") format("truetype"),url("Fonts/e573e530-80e6-4663-9fc4-ea08234961e8.svg#e573e530-80e6-4663-9fc4-ea08234961e8") format("svg");
+    }
+    @font-face{
+        font-family:"ITC Serif Gothic W01 Heavy";
+        src:url("Fonts/1c9817e8-6c4f-480e-9999-821b4ab1d758.eot?#iefix");
+        src:url("Fonts/1c9817e8-6c4f-480e-9999-821b4ab1d758.eot?#iefix") format("eot"),url("Fonts/b8981b27-2dd0-4731-88f9-52738a42cb19.woff2") format("woff2"),url("Fonts/536ef3e6-82f2-458f-b5bb-e3401fe9046f.woff") format("woff"),url("Fonts/eccf0052-e433-427e-8256-6fe092957d93.ttf") format("truetype"),url("Fonts/95d15e2e-fc37-4eb2-a032-590de39a435d.svg#95d15e2e-fc37-4eb2-a032-590de39a435d") format("svg");
+    }
+    @font-face{
+        font-family:"ITC Serif Gothic W01 Black";
+        src:url("Fonts/ddcbbda2-7bc2-453e-83ef-6fce5e35205a.eot?#iefix");
+        src:url("Fonts/ddcbbda2-7bc2-453e-83ef-6fce5e35205a.eot?#iefix") format("eot"),url("Fonts/746f4e58-430f-45ee-ac2e-90a2bb8f5c9d.woff2") format("woff2"),url("Fonts/7c736433-916b-4f83-b1bb-a45beeb5c757.woff") format("woff"),url("Fonts/a1206967-643e-459f-bc44-72159b4e0dee.ttf") format("truetype"),url("Fonts/0b5eac11-f3c7-4a6e-bcf1-5d87a72a1596.svg#0b5eac11-f3c7-4a6e-bcf1-5d87a72a1596") format("svg");
+    }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1 class="demo">Fonts.com Web fonts</h1>
+        <p style="margin-top:-10px; font-size:1.5em;color:#666"><b>@font-face implementation instructions</b></p>
+        <hr />
+        <p class="uc">The fonts contained in this kit are:</p>
+        <div class="fontdisplay">
+<div style="font-family:'ITC Serif Gothic W01 Light';"> ITC Serif Gothic® W01 Light </div>
+<div style="font-family:'ITC Serif Gothic W01 Regular';"> ITC Serif Gothic® W01 Roman </div>
+<div style="font-family:'ITC Serif Gothic W01 Bold';"> ITC Serif Gothic® W01 Bold </div>
+<div style="font-family:'ITC Serif Gothic W01 Xtra Bold';"> ITC Serif Gothic® W01 Extra Bold </div>
+<div style="font-family:'ITC Serif Gothic W01 Heavy';"> ITC Serif Gothic® W01 Heavy </div>
+<div style="font-family:'ITC Serif Gothic W01 Black';"> ITC Serif Gothic® W01 Black </div>
+
+        </div>
+        <hr />
+        Click here for <a class="link uc" href="demo-async.htm">asynchronous</a> web fonts implementation
+        <hr />
+        <div class="guidelines">
+            <h2>CSS Implementation Guidelines</h2>
+            <p>You and any third party web font hosting service are responsible for ensuring that the font software in the self-hosting kit, in its original format, can only be used on the Web Sites for which the self-hosting kit was downloaded and cannot be used or referenced by any other web site. This includes, but is not limited to installing adequate technical protection measures that restrict the use and/or access to the font software, for instance by utilizing JavaScript or access control mechanism for cross-origin resource sharing and protecting against use on web sites other than the Web Sites for which the self-hosting kit was downloaded by restricting domain access only to such Web Sites. You must also retain the pageview tracking code on any Web Site that you self-host. In the event this Agreement terminates for any reason, the font software included with the self-hosting kit must be deleted from the server and all copies must be destroyed or returned to Monotype Imaging.</p>
+            <p>View <a class="link" href="http://www.fonts.com/info/legal/eula/web-fonts" target="_blank">"WEB FONT SOFTWARE" LICENSE AGREEMENT</a></p>
+            <p>Font file names have been obfuscated to protect the font software. You can identify font format based on file ending:</p>
+            <ul>
+                <li>1 - TrueType (ttf)</li>
+                <li>2 - Embedded OpenType (eot)</li>
+                <li>3 - Web Open Font Format (woff)</li>
+                <li>4 - Web Open Font Format version 2 (woff2)</li>
+                <li>5 - Scalable Vector Graphics (svg)</li>
+            </ul>
+            <p class="uc" style="margin: 20px 0px -20px;"><b>Copy and paste following code in head section of the page</b></p>
+            <hr />
+            <textarea style="width:830px; height:350px; border:1 #fff solid; background-color:#fcfcfc;"><style type="text/css">
+
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=b88d06ae-ffa0-4966-bb0c-004af7a4ab28");
+    @font-face{
+        font-family:"ITC Serif Gothic W01 Light";
+        src:url("Fonts/b48153ff-91ec-4a5e-984c-f18f2131fdcd.eot?#iefix");
+        src:url("Fonts/b48153ff-91ec-4a5e-984c-f18f2131fdcd.eot?#iefix") format("eot"),url("Fonts/0bb0fed2-c048-479d-b066-6e827220acfd.woff2") format("woff2"),url("Fonts/947a585d-09d8-4c06-9210-ad3c83d2a5c3.woff") format("woff"),url("Fonts/7db29c7f-eca8-44ad-a1a9-b67084e525e9.ttf") format("truetype"),url("Fonts/5bbd4cf1-8bb2-48e3-8904-724e2c2bd79c.svg#5bbd4cf1-8bb2-48e3-8904-724e2c2bd79c") format("svg");
+    }
+    @font-face{
+        font-family:"ITC Serif Gothic W01 Regular";
+        src:url("Fonts/b43886e2-e680-4298-a1d3-04a98e443c58.eot?#iefix");
+        src:url("Fonts/b43886e2-e680-4298-a1d3-04a98e443c58.eot?#iefix") format("eot"),url("Fonts/8267519e-38e1-42b7-b339-a79d3cde5002.woff2") format("woff2"),url("Fonts/606558f4-4199-4bb9-ab0b-4dd3f367aadf.woff") format("woff"),url("Fonts/137f2c49-985f-452d-b750-3add9d73c43b.ttf") format("truetype"),url("Fonts/0206f4da-d12c-40a8-a650-f205d7ef417d.svg#0206f4da-d12c-40a8-a650-f205d7ef417d") format("svg");
+    }
+    @font-face{
+        font-family:"ITC Serif Gothic W01 Bold";
+        src:url("Fonts/8a93a51e-d42c-4af6-820d-916a3af90843.eot?#iefix");
+        src:url("Fonts/8a93a51e-d42c-4af6-820d-916a3af90843.eot?#iefix") format("eot"),url("Fonts/00cca847-1c2d-4f4f-8f48-2aa716baf319.woff2") format("woff2"),url("Fonts/bfc6196d-ff5b-4479-bee4-2fb7ea160473.woff") format("woff"),url("Fonts/2c63e36c-a575-4dc4-8474-6f85d3907f11.ttf") format("truetype"),url("Fonts/8ed94d50-0c48-4567-a54f-c91b17b5a05f.svg#8ed94d50-0c48-4567-a54f-c91b17b5a05f") format("svg");
+    }
+    @font-face{
+        font-family:"ITC Serif Gothic W01 Xtra Bold";
+        src:url("Fonts/637b12d8-ebf7-4544-8a75-1df81c2cf93f.eot?#iefix");
+        src:url("Fonts/637b12d8-ebf7-4544-8a75-1df81c2cf93f.eot?#iefix") format("eot"),url("Fonts/7879481a-3cca-4aa3-b61a-0ea374873d3c.woff2") format("woff2"),url("Fonts/da1a4bf3-eb87-4fcf-a331-f94204cdff8b.woff") format("woff"),url("Fonts/5d80bec5-9683-425e-9b82-0f12312b4e5f.ttf") format("truetype"),url("Fonts/e573e530-80e6-4663-9fc4-ea08234961e8.svg#e573e530-80e6-4663-9fc4-ea08234961e8") format("svg");
+    }
+    @font-face{
+        font-family:"ITC Serif Gothic W01 Heavy";
+        src:url("Fonts/1c9817e8-6c4f-480e-9999-821b4ab1d758.eot?#iefix");
+        src:url("Fonts/1c9817e8-6c4f-480e-9999-821b4ab1d758.eot?#iefix") format("eot"),url("Fonts/b8981b27-2dd0-4731-88f9-52738a42cb19.woff2") format("woff2"),url("Fonts/536ef3e6-82f2-458f-b5bb-e3401fe9046f.woff") format("woff"),url("Fonts/eccf0052-e433-427e-8256-6fe092957d93.ttf") format("truetype"),url("Fonts/95d15e2e-fc37-4eb2-a032-590de39a435d.svg#95d15e2e-fc37-4eb2-a032-590de39a435d") format("svg");
+    }
+    @font-face{
+        font-family:"ITC Serif Gothic W01 Black";
+        src:url("Fonts/ddcbbda2-7bc2-453e-83ef-6fce5e35205a.eot?#iefix");
+        src:url("Fonts/ddcbbda2-7bc2-453e-83ef-6fce5e35205a.eot?#iefix") format("eot"),url("Fonts/746f4e58-430f-45ee-ac2e-90a2bb8f5c9d.woff2") format("woff2"),url("Fonts/7c736433-916b-4f83-b1bb-a45beeb5c757.woff") format("woff"),url("Fonts/a1206967-643e-459f-bc44-72159b4e0dee.ttf") format("truetype"),url("Fonts/0b5eac11-f3c7-4a6e-bcf1-5d87a72a1596.svg#0b5eac11-f3c7-4a6e-bcf1-5d87a72a1596") format("svg");
+    }
+
+</style>
+
+</textarea>
+            <h3>Licensing information should be included within the CSS</h3>
+<pre>/*
+This CSS resource incorporates links to font software which is the valuable copyrighted
+property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
+redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+Imaging with any questions regarding Web Fonts:  http://www.fonts.com
+*/</pre>
+        </div>
+    </div>
+</body>
+</html>
