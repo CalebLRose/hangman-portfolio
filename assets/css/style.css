@@ -24,8 +24,9 @@ body{
     background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center top;
-	color: red;
+	color: #e31904;
     background-color: #000;
+    text-shadow: 0 0 7px #f63521;
 }
 
 #heading {
@@ -35,6 +36,7 @@ body{
 }
 
 #title {
+    text-shadow: 0 0 10px #f63521;
 	font-family: ITC Serif Gothic W01 Black, Latin, serif;
 	font-size: 100px;
 	letter-spacing: 12px;
@@ -48,7 +50,7 @@ body{
 
 #subTitle {
     width: 400px ;
-
+    text-shadow: 0 0 10px #f63521;
 	font-family: ITC Serif Gothic W01 Regular, Latin, serif;
 	font-size: 40px;
     margin: -35px 150px;
