@@ -29,12 +29,14 @@ window.onload = function(){
 	var correct;
 
 	function clear(){
-			underscore = [];
+			underscore.length = 0;
 			wrongGuess = 10;
 			chosenWord;
 			str = "";
 			userInput;
-			usedLetters=[];
+			usedLetters.length=0;
+			document.getElementById("lettersGuessed").innerHTML = ("Letters Used: " + usedLetters);
+
 	};
 
 	// Choose a word randomly
