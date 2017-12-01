@@ -28,6 +28,15 @@ window.onload = function(){
 	var usedLetters = [];
 	var correct;
 
+	function clear(){
+			underscore = [];
+			wrongGuess = 10;
+			chosenWord;
+			str = "";
+			userInput;
+			usedLetters=[];
+	};
+
 	// Choose a word randomly
 	function wordChoice(){
 		x = Math.floor(Math.random() * wordList.length);
@@ -41,19 +50,22 @@ window.onload = function(){
 		for (var i =0; i < chosenWord.length; i++) {
 			underscore.push("_");
 			str += "_";
+			document.getElementById("answer").innerHTML = (underscore.join(" "));
 		};
 		return underscore;
 	};
 
-	console.log(underscore.join(""));
-	console.log("chosen word "+chosenWord);
-	console.log(generateUnderscore(chosenWord));
-	console.log("str "+str);	
-	console.log("under "+underscore.join(""));
-	document.getElementById("answer").innerHTML = (underscore.join(" "));
+	// console.log(underscore.join(""));
+	// console.log("chosen word "+chosenWord);
+	// console.log(generateUnderscore(chosenWord));
+	// console.log("str "+str);	
+	// console.log("under "+underscore.join(""));
+	
+	
 
+	generateUnderscore();
 
-	document.onkeyup = function(event) {
+	document.onkeydown = function(event) {
 		console.log(event.key);
 		
 		if (letters.indexOf(event.key) >= 0) {
@@ -81,12 +93,11 @@ window.onload = function(){
 						console.log("check " + chosenWord);
 						if(correct === chosenWord){
 							wins++;
-							wordChoice();
-							generateUnderscore(wordChoice);
-							document.getElementById("answer").innerHTML = (underscore.join(" "));
 							console.log("wins " + wins);
 							document.getElementById("wins").innerHTML = ("Wins:  " + wins);
-
+							clear();
+							wordChoice();
+							generateUnderscore();
 						};
 			} else {
 				losses++;
@@ -94,6 +105,9 @@ window.onload = function(){
 				console.log("losses: " + losses);
 				document.getElementById("gameOver").innerHTML = ("Try Again");
 				document.getElementById("gameOver").style.visibility = "visible";
+				clear();
+				wordChoice();
+				generateUnderscore();
 			};
 		};
 	};
