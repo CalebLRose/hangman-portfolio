@@ -31,12 +31,12 @@ window.onload = function(){
 	function clear(){
 			underscore.length = 0;
 			wrongGuess = 10;
+			document.getElementById("guesses").innerHTML = ("Guesses Left: " + wrongGuess);
 			chosenWord;
 			str = "";
 			userInput;
 			usedLetters.length=0;
 			document.getElementById("lettersGuessed").innerHTML = ("Letters Used: " + usedLetters);
-
 	};
 
 	// Choose a word randomly
