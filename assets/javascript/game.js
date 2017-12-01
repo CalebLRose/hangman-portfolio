@@ -21,7 +21,8 @@ window.onload = function(){
 					"steve", 
 					"nancy", 
 					"jonathan", 
-					"barb",
+					"max",
+					"billy",
 				];
 	var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m",
 				"n","o","p","q","r","s","t","u","v","w","x","y","z"];
@@ -97,19 +98,27 @@ window.onload = function(){
 							wins++;
 							console.log("wins " + wins);
 							document.getElementById("wins").innerHTML = ("Wins:  " + wins);
-							clear();
-							wordChoice();
-							generateUnderscore();
+							setTimeout(resetWin, 2000);
+							function resetWin(){
+								clear();
+								wordChoice();
+								generateUnderscore();
+							};	
 						};
 			} else {
 				losses++;
 				document.getElementById("losses").innerHTML = ("Losses: " + losses);
 				console.log("losses: " + losses);
-				document.getElementById("gameOver").innerHTML = ("Try Again");
-				document.getElementById("gameOver").style.visibility = "visible";
-				clear();
-				wordChoice();
-				generateUnderscore();
+				document.getElementById("whole").style.visibility=("hidden");
+				document.getElementById("gameOver").style.visibility = ("visible");
+				setTimeout(resetLoss, 2000);
+					function resetLoss(){
+						document.getElementById("gameOver").style.visibility = ("hidden");
+						document.getElementById("whole").style.visibility=("visible");
+						clear();
+						wordChoice();
+						generateUnderscore();
+					};	
 			};
 		};
 	};

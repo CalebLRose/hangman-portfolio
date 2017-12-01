@@ -24,19 +24,19 @@ body{
     background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center top;
-	color: #e31904;
+	color: #ff1a01;
     background-color: #000;
-    text-shadow: 0 0 7px #f63521;
+    text-shadow: 0 0 3px #fd4f3d;
 }
 
 #heading {
     width: 720px;
-	margin: 20px 210px;
+	margin: 10px 210px;
     text-align: center;
 }
 
 #title {
-    text-shadow: 0 0 10px #f63521;
+    text-shadow: 0 0 10px #fd4f3d;
 	font-family: ITC Serif Gothic W01 Black, Latin, serif;
 	font-size: 100px;
 	letter-spacing: 12px;
@@ -50,20 +50,72 @@ body{
 
 #subTitle {
     width: 400px ;
-    text-shadow: 0 0 10px #f63521;
+    text-shadow: 0 0 10px #fd4f3d;
 	font-family: ITC Serif Gothic W01 Regular, Latin, serif;
 	font-size: 40px;
     margin: -35px 150px;
 }
 
 #whole {
-    width: 720px;
-    margin: 75px 210px;
-	font-family: ITC Serif Gothic W01 Light, Latic, serif;
-	font-size: 32px;
+    margin: 75px 176px;
+    width: 900px;
+    position: relative;
+    font-family: ITC Serif Gothic W01 Light, Latic, serif;
+    font-size: 32px;
+}
+
+.main {
+    padding: 5px;
+}
+
+.box{
+    display: inline-block;
+    position: absolute;
+}
+
+#left {
+    left: 80px;
+    width: 375px;
+}
+
+#poster{
+    width: 80%;
+}
+
+#content {
+    line-height: 34px;
+    top: -30px;
+    right: 175px;
+    width: 300px;
+}
+
+#border {
+    box-shadow: 0 0 25px #fd4f3d;
+    position: absolute;
+    margin: 38px 172px;
+    width: 800px;
+    height: 490px;
+    border-style: solid;
+    border-width: 4px;
+}
+
+#answer {
+    padding: 25px 0px;
+    font-size: 42px;
+    text-transform: capitalize;
+}
+#instruct {
+    font-family: ITC Serif Gothic W01 Regular, Latin, serif;
+    letter-spacing: 1px;
+    padding-top: 15px;
+    font-size: 28px;
 }
 
 #gameOver{
 	visibility: hidden;
+    font-family: ITC Serif Gothic W01 Black, Latin, serif;
+    width: 300px; 
+    font-size: 56px;
+    margin: 80px 440px;
 }
 

@@ -15,36 +15,39 @@
 		<h2 id="subTitle">Stranger Things Edition</h2>
 	</div>
 
+	<div id="border" ></div>
+
 	<div id="whole">
-			<!-- centered -->
-		<div>
-			<h1>Type any letter to begin</h1>
-		</div>
-		<!-- left aligned -->
-		<div id="images">
+
+		<div class="box" id="left">
+			<img id="poster" src="assets/images/STPoster.jpg">
 			<!-- this will be the left side of the display, where the images will be desplayed. -->
 		</div>
-		<div id="content">
+		
+		<div class="box" id="content">
 			<!-- this is the right side where the game info will be displayed. -->
-			<p id="answer"></p>
-		</div>
-		<div>
+			<div class="main" id="under">
+				<p id="answer"></p>
+			</div>
 			<!-- Scoreboard right aligned -->
-			<p id="wins">Wins: 0</p>
-			<p id="losses">Losses: 0</p>
-			<p id="guesses">Guesses Left: 10</p>
+			<div class="main" >
+				<p id="wins">Wins: 0</p>
+				<p id="losses">Losses: 0</p>
+				<p id="guesses">Guesses Left: 10</p>
+				<p id="lettersGuessed">Letters used: </p>
+			</div>
 			
-		</div>
-		<div>
-			<p id="lettersGuessed">Letters used: </p>
+			<div class="main"  id="instruct">
+				<h1>Instructions:</h1>
+				<p>Type the letter to complete the hidden character name. Hint: all the names are in the poster.</p>
+			</div>
 
-			
-		</div>
-		<div id="gameOver">
-			<h1>Game Over</h1>
-		</div>
+		</div>	
 	</div>
 
+	<div id="gameOver">
+		<h1>Oh no! The Demogorgon got you. Try again.</h1>
+	</div>
 
 	<audio id="muzak" autoplay="autoplay" loop="true">
      	<source src="assets/audio/Stranger_Things.mp3" />     
